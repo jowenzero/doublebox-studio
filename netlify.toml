@@ -1,0 +1,5 @@
+## Not needed for static site generators.
+  [[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
