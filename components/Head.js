@@ -8,7 +8,7 @@ const brand = {
     footerText: 'A mobile game development company.',
     logoText: 'DoubleBox Studio',
     projectName: 'DoubleBox Studio',
-    url: 'doubleboxstudio.com',
+    url: 'doublebox-studio.netlify.app',
     img: '/icons/doublebox-studio.svg',
 }
 
