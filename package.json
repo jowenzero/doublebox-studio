@@ -1,0 +1,37 @@
+{
+  "name": "doublebox-studio",
+  "version": "0.1",
+  "private": true,
+  "scripts": {
+    "staging": "npm run build:staging && npm run start:staging",
+    "production": "cross-env NODE_ENV=development ENV=production next dev -p 4000",
+    "dev": "cross-env NODE_ENV=development ENV=development next dev",
+    "build": "cross-env ENV=production next build",
+    "start": "cross-env NODE_ENV=production ENV=production next start",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "@apollo/react-hooks": "^3.1.5",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link-context": "^1.0.20",
+    "apollo-link-http": "^1.5.17",
+    "apollo-upload-client": "^13.0.0",
+    "cross-env": "^7.0.2",
+    "graphql": "^15.1.0",
+    "graphql-tag": "^2.10.3",
+    "isomorphic-unfetch": "^3.0.0",
+    "js-cookie": "^2.2.1",
+    "next": "9.4.4",
+    "next-images": "^1.5.0",
+    "next-seo": "^4.7.3",
+    "next-with-apollo": "^5.0.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "sass": "^1.26.11"
+  }
+}
