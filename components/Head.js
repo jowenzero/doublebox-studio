@@ -8,7 +8,7 @@ const brand = {
     footerText: 'A mobile game development company.',
     logoText: 'DoubleBox Studio',
     projectName: 'DoubleBox Studio',
-    url: 'doublebox-studio.netlify.app',
+    url: 'doublebox.netlify.app',
     img: '/icons/doublebox-studio.svg',
 }
 
@@ -55,9 +55,9 @@ const HeadComponent = () => (
         {/*  Twitter */}
         <meta property="twitter:site" content={brand.url} />
         <meta property="twitter:domain" content={brand.url} />
-        <meta property="twitter:creator" content="mejik.id" />
+        <meta property="twitter:creator" content="doublebox" />
         <meta property="twitter:card" content="summary" />
-        <meta property="twitter:image:src" content="/images/artlogo.svg" />
+        <meta property="twitter:image:src" content="/icons/doublebox-studio.svg" />
         <meta property="og:url" content={brand.url} />
         <meta property="og:title" content={brand.title} />
         <meta
