@@ -16,7 +16,7 @@ export default function Home() {
             <p className="title-head">Welcome to</p>
 
             <h1 className="title">
-              <a href="https://nextjs.org">Next.js</a> with Mejik Art
+              <a href="https://nextjs.org">Next.js</a> with DoubleBox Studio
             </h1>
 
             <p className="description">
@@ -26,9 +26,9 @@ export default function Home() {
           </Grid>
           <Grid item xs={6}>
             <div className="logo-head">
-              <img src="/next.svg" alt="Next Logo" className="logo" />
+              <img src="/next-white.svg" alt="Next Logo" className="logo" />
               <img src="/cross.svg" alt="Cross" className="cross" />
-              <img src="/art.svg" alt="Mejik Art Logo" className="logo" />
+              <img src="/icons/doublebox-logo.svg" alt="DoubleBox Studio Logo" className="logo" />
             </div>
           </Grid>
         </Grid>
@@ -73,7 +73,7 @@ export default function Home() {
           }
 
           code {
-            background: #fafafa;
+            background: #050505;
             border-radius: 5px;
             padding: 0.75rem;
             font-size: 1.1rem;

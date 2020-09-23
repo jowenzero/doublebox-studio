@@ -124,6 +124,7 @@ const NavBar = () => {
           position: fixed;
           display: flex;
           z-index: 99;
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         }
       `}</style>
     </div>

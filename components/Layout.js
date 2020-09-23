@@ -16,7 +16,8 @@ const useStyles = makeStyles(theme => ({
     paddingTop: sectionMargin(theme.spacing()),
     [theme.breakpoints.down("sm")]: {
       paddingTop: 50
-    }
+    },
+    background: "#221F1F",
   }
 }));
 
