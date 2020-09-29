@@ -11,6 +11,7 @@ import "../sass/scroll.scss"
 class MyApp extends App {
   render() {
     const { Component, pageProps, apollo } = this.props;
+    
     return (
       <>
         <ThemeProvider theme={theme}>

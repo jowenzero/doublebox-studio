@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Layout from "../components/Layout";
 import {
   Grid,
@@ -11,7 +10,7 @@ export default function Home() {
       <Layout>
         <NextSeo title="Home" />
 
-        <Grid container spacing={2} style={{marginTop: 50, marginBottom: 70}}>
+        <Grid container spacing={2} style={{marginTop: 80, marginBottom: 70}}>
           <Grid item xs={6}>
             <p className="title-head">Welcome to</p>
 

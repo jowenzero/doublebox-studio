@@ -48,7 +48,7 @@ const HeadComponent = () => (
         {/* PWA primary color */}
         <meta name="theme-color" content="#ffffff" />
         {/*  Facebook */}
-        <meta property="author" content="mejik art" />
+        <meta property="author" content="DoubleBox Studio" />
         <meta property="og:site_name" content={brand.url} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />

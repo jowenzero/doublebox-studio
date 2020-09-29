@@ -5,7 +5,6 @@ import Footer from "./Footer";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container } from "@material-ui/core";
 
-const sectionMargin = margin => margin * 15;
 const useStyles = makeStyles(theme => ({
   mainWrap: {
     position: "relative",
@@ -13,10 +12,7 @@ const useStyles = makeStyles(theme => ({
     overflow: "hidden",
     display: "flex",
     justifyContent: "center",
-    paddingTop: sectionMargin(theme.spacing()),
-    [theme.breakpoints.down("sm")]: {
-      paddingTop: 50
-    },
+    paddingTop: 88,
     background: "#221F1F",
   }
 }));

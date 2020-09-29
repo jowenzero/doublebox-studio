@@ -1,65 +1,5 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
-const googleSans = {
-  fontFamily: "GoogleSans",
-  fontStyle: "normal",
-  fontDisplay: "swap",
-  fontWeight: "normal",
-  src: `
-    url('/fonts/GoogleSans-Regular.ttf') format("truetype")
-  `
-};
-
-const googleSansMedium = {
-  fontFamily: "GoogleSans",
-  fontStyle: "normal",
-  fontDisplay: "swap",
-  fontWeight: 500,
-  src: `
-    url('/fonts/GoogleSans-Medium.ttf') format("truetype")
-  `
-};
-
-const googleSansMediumItalic = {
-  fontFamily: "GoogleSans",
-  fontStyle: "italic",
-  fontDisplay: "swap",
-  fontWeight: 500,
-  src: `
-    url('/fonts/GoogleSans-MediumItalic.ttf') format("truetype")
-  `
-};
-
-const googleSansItalic = {
-  fontFamily: "GoogleSans",
-  fontStyle: "italic",
-  fontDisplay: "swap",
-  fontWeight: 400,
-  src: `
-    url('/fonts/GoogleSans-Italic.ttf') format("truetype")
-  `
-};
-
-const googleSansBold = {
-  fontFamily: "GoogleSans",
-  fontStyle: "normal",
-  fontDisplay: "swap",
-  fontWeight: "bold",
-  src: `
-    url('/fonts/GoogleSans-Bold.ttf') format("truetype")
-  `
-};
-
-const googleSansBoldItalic = {
-  fontFamily: "GoogleSans",
-  fontStyle: "italic",
-  fontDisplay: "swap",
-  fontWeight: "bold",
-  src: `
-    url('/fonts/GoogleSans-BoldItalic.ttf') format("truetype")
-  `
-};
-
 const gothic = {
   fontFamily: "Gothic",
   fontStyle: "normal",
@@ -103,7 +43,7 @@ const gothicBoldItalic = {
 const theme = createMuiTheme({
   palette: {
     background: {
-      default: "#FBFBFC"
+      default: "#221F1F"
     },
     grey: {
       "100": "#F0F2F5",
@@ -130,9 +70,6 @@ const theme = createMuiTheme({
     },
     h6: {
       fontWeight: "bold"
-    },
-    p: {
-      fontWeight: "normal"
     },
     fontFamily: "Gothic,Arial"
   },
