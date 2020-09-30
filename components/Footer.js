@@ -5,7 +5,7 @@ import {
   Container
  } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Background from "../public/images/footer-bg.svg";
+import Pattern from "../public/images/pattern.svg";
 
 const useStyles = makeStyles(theme => ({
   mainWrap: {
@@ -15,7 +15,8 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "center",
     paddingTop: 40,
-    backgroundImage: `url(${Background})`,
+    background: "#221f1f",
+    backgroundImage: `url(${Pattern})`,
   }
 }));
 

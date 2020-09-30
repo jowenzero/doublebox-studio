@@ -7,6 +7,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Background from '../public/images/drawer-bg.svg';
+import MiniFooter from "./MiniFooter";
 
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
@@ -63,7 +64,7 @@ const useStyles = makeStyles(theme => ({
     overflow: "hidden",
     display: "flex",
     justifyContent: "center",
-    paddingTop: 88,
+    paddingTop: 60,
   },
   rootExpand: {
     width: "100%",
@@ -95,11 +96,21 @@ const DrawerComponent = (props) => {
   const SideList = () => (
     <Container maxWidth="xl">
       <Grid container spacing={1} style={{ marginTop: 20, marginBottom: 50 }}>
-        <img
-          style={{ width: '96%', height: 'auto', marginLeft: '2%' }}
-          src="/images/ornament.svg"
-          alt=""
-        />
+        <div style={{ 
+          color: 'transparent', 
+          background: "#DC6624", 
+          width: "95%", 
+          height: "9px", 
+          marginLeft: '2%',
+          boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'
+        }}>.</div>
+        <div style={{ 
+          color: 'transparent', 
+          background: "#C33795", 
+          width: "9px",
+          height: "30px",
+          boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'
+        }}>.</div>
 
         {/* <Accordion square className={classes.rootExpand}>
           <AccordionSummary
@@ -136,10 +147,15 @@ const DrawerComponent = (props) => {
       classes={{
           paper: classes.paperNav
       }}
+      transitionDuration={400}
+      anchor="top"
     >
-      <main className={classes.mainWrap} style={{ minHeight: "100vh" }}>
-        <SideList />
-      </main>
+      <div>
+        <main className={classes.mainWrap} style={{ minHeight: "100vh" }}>
+          <SideList />
+        </main>
+        <MiniFooter/>
+      </div>
     </Drawer>
   );
 }

@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     overflow: "hidden",
     display: "flex",
     justifyContent: "center",
-    paddingTop: 88,
+    paddingTop: 60,
     background: "#221F1F",
   }
 }));
