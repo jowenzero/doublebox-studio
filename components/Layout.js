@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
+import MiniFooterSocial from "./MiniFooterSocial";
 import Footer from "./Footer";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -26,6 +27,7 @@ const Layout = props => {
       <main className={classes.mainWrap} style={{ minHeight: "100vh" }}>
         <Container maxWidth="xl">{props.children}</Container>
       </main>
+      <MiniFooterSocial />
       <Footer />
     </div>
   );
