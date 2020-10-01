@@ -111,50 +111,6 @@ const NavBar = () => {
               />
             </IconButton>
           </Grid>
-
-          {/* <Grid item justify="flex-end" container spacing={3} xs style={{ paddingTop: 10 }}>
-            {navButtons.map((button, i) => (
-              <Fragment key={i}>
-                { !button.noBorder ?
-                  <Grid 
-                    item 
-                    key={i} 
-                    style={{ 
-                      borderRight: button.lastBorder ? "2px solid #D96522" : "2px solid #fff", 
-                      height: 55, 
-                      width: 110, 
-                      marginTop: 15,
-                      textAlign: 'center', 
-                    }}
-                  >
-                    <NavButton
-                      key={button.path}
-                      path={button.path || ""}
-                      label={button.label}
-                      noBorder={button.noBorder}
-                    />
-                  </Grid> :
-                  <Grid 
-                    item 
-                    key={i} 
-                    style={{ 
-                      height: 90, 
-                      width: 110, 
-                      textAlign: 'center', 
-                      background: 'rgba(217, 101, 34, 0.2)',
-                    }}
-                  >
-                    <NavButton
-                      key={button.path}
-                      path={button.path || ""}
-                      label={button.label}
-                      noBorder={button.noBorder}
-                    />
-                  </Grid>
-                }
-              </Fragment>
-            ))}
-          </Grid> */}
         </Grid>
       </Container>
 
