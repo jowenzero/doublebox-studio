@@ -8,9 +8,11 @@ import {
   ButtonBase,
   Link
 } from "@material-ui/core";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { makeStyles, withStyles, useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Background from '../public/images/drawer-bg.svg';
 import MiniFooter from "./MiniFooter";
+import clsx from "clsx";
 
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
@@ -112,6 +114,8 @@ const useStyles = makeStyles(theme => ({
 
 const DrawerComponent = (props) => {
   const classes = useStyles();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const { toggleDrawer, open } = props;
 
   const SideList = () => (
@@ -209,26 +213,30 @@ const DrawerComponent = (props) => {
                     marginLeft: 20,
                   }} key={index}>
                     <ButtonBase>
-                      <div style={{ width: 215, height: 215 }}>
+                      <div style={{ width: isMobile ? 115 : 215, height: isMobile ? 115 : 215 }}>
                         { item.image ? 
                           <>
-                            <img
-                              src={item.image}
-                              alt=""
-                              style={{
-                                  width: '100%',
-                                  height: '100%'
-                              }}
-                            />
+                            <div className={clsx(
+                              isMobile ? "img-shadow-mini" : "img-shadow"
+                            )}>
+                              <img
+                                src={item.image}
+                                alt=""
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                }}
+                              />
+                            </div>
                             <Typography
                               gutterBottom
                               variant="body1"
                               style={{
                                 position: 'absolute', 
-                                bottom: 8,
-                                marginLeft: 10,
+                                bottom: isMobile ? 3 : 8,
+                                marginLeft: isMobile ? 6 : 10,
                                 color: "#fff", 
-                                fontSize: 24,
+                                fontSize: isMobile ? 16 : 24,
                                 textAlign: 'left',
                               }}
                             >
@@ -245,10 +253,10 @@ const DrawerComponent = (props) => {
                                 variant="body1"
                                 style={{
                                   position: 'absolute', 
-                                  bottom: 8,
-                                  marginLeft: 10,
+                                  bottom: isMobile ? 3 : 8,
+                                  marginLeft: isMobile ? 6 : 10,
                                   color: "#fff", 
-                                  fontSize: 24,
+                                  fontSize: isMobile ? 16 : 24,
                                   textAlign: 'left',
                                 }}
                               >
@@ -337,6 +345,48 @@ const DrawerComponent = (props) => {
           </Link>
         </div>
       </Grid>
+
+      <style jsx>{`
+        .img-shadow {
+          position: relative;
+          max-width: 100%;
+          float: left;
+        }
+            
+        .img-shadow::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          box-shadow: inset 0 -1050px 1000px -1000px #000000;
+        } 
+             
+        .img-shadow img {
+          float: left;
+        } 
+
+        .img-shadow-mini {
+          position: relative;
+          max-width: 100%;
+          float: left;
+        }
+            
+        .img-shadow-mini::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          box-shadow: inset 0 -1030px 1000px -1000px #000000;
+        } 
+             
+        .img-shadow-mini img {
+          float: left;
+        } 
+      `}</style>
     </Container>
   );
 
