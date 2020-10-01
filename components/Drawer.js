@@ -19,7 +19,6 @@ import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import Slider from "react-slick";
 import ScrollMenu from 'react-horizontal-scrolling-menu';
 
 const games = [

@@ -25,7 +25,7 @@ const Layout = props => {
     <div>
       <NavBar />
       <main className={classes.mainWrap} style={{ minHeight: "100vh" }}>
-        <Container maxWidth="xl">{props.children}</Container>
+        <Container maxWidth="xl" disableGutters>{props.children}</Container>
       </main>
       <MiniFooterSocial />
       <Footer />
