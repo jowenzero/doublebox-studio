@@ -1,6 +1,10 @@
 import styled from "@emotion/styled";
 
 const MiniSliderWrapper = styled("div")`
+  *:focus {
+    outline: 0;
+    outline: none;
+  }
   .slick-list {
     overflow: ${props => (props.overflow ? "visible" : "hidden")};
   }
@@ -155,7 +159,7 @@ const MiniSliderWrapper = styled("div")`
   .slick-prev:before,
   .slick-next:before {
     font-family: "slick";
-    font-size: 20px;
+    font-size: 0px;
     line-height: 1;
 
     opacity: 0.75;
@@ -166,10 +170,10 @@ const MiniSliderWrapper = styled("div")`
   }
 
   .slick-prev {
-    left: -25px;
+    left: -40px;
   }
   [dir="rtl"] .slick-prev {
-    right: -25px;
+    right: -40px;
     left: auto;
   }
   .slick-prev:before {
@@ -180,11 +184,11 @@ const MiniSliderWrapper = styled("div")`
   }
 
   .slick-next {
-    right: -25px;
+    right: -40px;
   }
   [dir="rtl"] .slick-next {
     right: auto;
-    left: -25px;
+    left: -40px;
   }
   .slick-next:before {
     content: "→";

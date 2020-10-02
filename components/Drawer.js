@@ -208,8 +208,8 @@ const DrawerComponent = (props) => {
                 alignCenter={false}
                 data={games.map((item, index) => (
                   <div style={{
-                    marginRight: 20,
-                    marginLeft: 20,
+                    marginRight: isMobile ? 12 : 20,
+                    marginLeft: isMobile ? 12 : 20,
                   }} key={index}>
                     <ButtonBase>
                       <div style={{ width: isMobile ? 115 : 215, height: isMobile ? 115 : 215 }}>

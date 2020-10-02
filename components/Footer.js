@@ -10,6 +10,8 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Pattern from "../public/images/pattern.svg";
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import Slider from "react-slick";
+import SliderWrapper from "../components/SlickSliderStyle"
 
 const useStyles = makeStyles(theme => ({
   mainWrap: {
@@ -20,8 +22,69 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     background: "#221f1f",
     backgroundImage: `url(${Pattern})`,
-  }
+  },
+  quoteWrap: {
+    marginLeft: 0,
+    marginRight: 0
+  },
 }));
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <IconButton
+      style={{
+        ...style, 
+        width: 44, 
+        height: 44, 
+        opacity: 0.6,
+        borderRadius: 0, 
+        color: "#fff"
+      }}
+      className={className}
+      onClick={onClick}
+      disableRipple
+    >
+      <ArrowForwardIosIcon />
+    </IconButton>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <IconButton
+      style={{
+        ...style, 
+        width: 44, 
+        height: 44, 
+        opacity: 0.6,
+        borderRadius: 0, 
+        color: "#fff"
+      }}
+      className={className}
+      onClick={onClick}
+      disableRipple
+    >
+      <ArrowBackIosIcon />
+    </IconButton>
+  );
+}
+
+
+const settings = {
+  dots: false,
+  arrows: true,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+  nextArrow: <SampleNextArrow />,
+  prevArrow: <SamplePrevArrow />
+};
 
 const policyMenu = [
   {
@@ -65,6 +128,21 @@ const menus = [
   },
 ];
 
+const quotes = [
+  {
+    text: "The passionate will always be the passionate, and nothing change that",
+  },
+  {
+    text: "Any sufficiently advanced technology is indistinguishable from magic",
+  },
+  {
+    text: "If you find a good move, look for a better one",
+  },
+  {
+    text: "Everybody in this country should learn to program a computer, because it teaches you how to think"
+  },
+];
+
 const Footer = () => {
   const classes = useStyles();
   const theme = useTheme();
@@ -82,45 +160,35 @@ const Footer = () => {
               paddingRight: 10,
             }}>
               <Grid item style={{ flexDirection: "row"}}>
-                <Grid container direction="row" style={{ flexDirection: "row" }}>
-                  <IconButton
-                    style={{ 
-                      width: 44, 
-                      height: 44, 
-                      opacity: 0.6,
-                      borderRadius: 0, 
-                      color: "#fff"
-                    }}
-                    disableRipple
-                  >
-                    <ArrowBackIosIcon />
-                  </IconButton>
-                  <Typography
-                    variant="body2"
-                    style={{
-                      color: "#fff", 
-                      fontSize: 18, 
-                      opacity: 0.6,
-                      width: 250,
-                      textAlign: 'center',
-                      fontStyle: "italic",
-                    }}
-                  >
-                    “The passionate will always be 
-                    the passionate, and nothing change that”
-                  </Typography>
-                  <IconButton
-                    style={{ 
-                      width: 44, 
-                      height: 44, 
-                      opacity: 0.6,
-                      borderRadius: 0, 
-                      color: "#fff"
-                    }}
-                    disableRipple
-                  >
-                    <ArrowForwardIosIcon />
-                  </IconButton>
+                <Grid
+                  container
+                  style={{ paddingLeft: 0, paddingRight: 0, marginTop: 0 }}
+                  direction="row"
+                  justify="center"
+                  alignItems="center"
+                >
+                  <div className={classes.quoteWrap}>
+                    <SliderWrapper>
+                      <Slider {...settings} style={{width: 270}}>
+                        {quotes.map((item, index) => (
+                          <div>
+                            <Typography
+                              variant="body2"
+                              style={{
+                                color: "#fff", 
+                                fontSize: 18, 
+                                opacity: 0.6,
+                                textAlign: 'center',
+                                fontStyle: "italic",
+                              }}
+                            >
+                              “{item.text}”
+                            </Typography>
+                          </div>
+                        ))}
+                      </Slider>
+                    </SliderWrapper>
+                  </div>
                 </Grid>
               </Grid>
 
@@ -339,46 +407,36 @@ const Footer = () => {
                 ))}
               </Grid>
 
-              <Grid item style={{ flexDirection: "row"}}>
-                <Grid container direction="row" style={{ flexDirection: "row" }}>
-                  <IconButton
-                    style={{ 
-                      width: 44, 
-                      height: 44, 
-                      opacity: 0.6,
-                      borderRadius: 0, 
-                      color: "#fff"
-                    }}
-                    disableRipple
-                  >
-                    <ArrowBackIosIcon />
-                  </IconButton>
-                  <Typography
-                    variant="body2"
-                    style={{
-                      color: "#fff", 
-                      fontSize: 18, 
-                      opacity: 0.6,
-                      width: 350,
-                      textAlign: 'center',
-                      fontStyle: "italic",
-                    }}
-                  >
-                    “The passionate will always be 
-                    the passionate, and nothing change that”
-                  </Typography>
-                  <IconButton
-                    style={{ 
-                      width: 44, 
-                      height: 44, 
-                      opacity: 0.6,
-                      borderRadius: 0, 
-                      color: "#fff"
-                    }}
-                    disableRipple
-                  >
-                    <ArrowForwardIosIcon />
-                  </IconButton>
+              <Grid item style={{ flexDirection: "row", width: 440}}>
+                <Grid
+                  container
+                  style={{ paddingLeft: 0, paddingRight: 0, marginTop: 0 }}
+                  direction="row"
+                  justify="center"
+                  alignItems="center"
+                >
+                  <div className={classes.quoteWrap}>
+                    <SliderWrapper>
+                      <Slider {...settings} style={{width: 350}}>
+                        {quotes.map((item, index) => (
+                          <div>
+                            <Typography
+                              variant="body2"
+                              style={{
+                                color: "#fff", 
+                                fontSize: 18, 
+                                opacity: 0.6,
+                                textAlign: 'center',
+                                fontStyle: "italic",
+                              }}
+                            >
+                              “{item.text}”
+                            </Typography>
+                          </div>
+                        ))}
+                      </Slider>
+                    </SliderWrapper>
+                  </div>
                 </Grid>
 
                 <Typography
