@@ -162,7 +162,7 @@ const Footer = () => {
               <Grid item style={{ flexDirection: "row"}}>
                 <Grid
                   container
-                  style={{ paddingLeft: 0, paddingRight: 0, marginTop: 0 }}
+                  style={{ paddingLeft: 0, paddingRight: 0, marginTop: 0, height: 120 }}
                   direction="row"
                   justify="center"
                   alignItems="center"
@@ -192,7 +192,7 @@ const Footer = () => {
                 </Grid>
               </Grid>
 
-              <Grid item style={{ flexDirection: "column", textAlign: 'center', marginTop: 30, marginBottom: 30 }}>
+              <Grid item style={{ flexDirection: "column", textAlign: 'center', marginTop: 20, marginBottom: 20 }}>
                 {menus.map((item, i) => (
                   <Link href={item.path} key={i}>
                     <Typography
@@ -410,7 +410,7 @@ const Footer = () => {
               <Grid item style={{ flexDirection: "row", width: 440}}>
                 <Grid
                   container
-                  style={{ paddingLeft: 0, paddingRight: 0, marginTop: 0 }}
+                  style={{ paddingLeft: 0, paddingRight: 0, marginTop: 0, height: 100}}
                   direction="row"
                   justify="center"
                   alignItems="center"
@@ -446,7 +446,7 @@ const Footer = () => {
                     color: "#fff", 
                     fontSize: 24, 
                     opacity: 0.6,
-                    marginTop: 63,
+                    marginTop: 20,
                     marginBottom: 6,
                     textAlign: 'center',
                   }}
