@@ -419,7 +419,7 @@ const Footer = () => {
                     <SliderWrapper>
                       <Slider {...settings} style={{width: 350}}>
                         {quotes.map((item, index) => (
-                          <div>
+                          <div key={index}>
                             <Typography
                               variant="body2"
                               style={{

@@ -9,6 +9,7 @@ import {
 import Link from "next/link";
 import NavButton from "./NavButton";
 import Drawer from "./Drawer";
+import LoginDrawer from "./LoginDrawer";
 import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Pattern from "../public/images/pattern.svg";
@@ -39,6 +40,12 @@ const NavBar = () => {
     setOpenDrawer(!openDrawer);
     setInitial(true);
   };
+
+  const [openLoginDrawer, setOpenLoginDrawer] = React.useState(false);
+
+  const handleOpenLoginDrawer = () => {
+    setOpenLoginDrawer(!openLoginDrawer);
+  };
   
   return (
     <div className={clsx(
@@ -48,6 +55,11 @@ const NavBar = () => {
       <Drawer
         open={openDrawer}
         toggleDrawer={handleOpenDrawer}
+      />
+
+      <LoginDrawer
+        open={openLoginDrawer}
+        toggleDrawer={setOpenLoginDrawer}
       />
 
       <Container maxWidth="xl" disableGutters>
@@ -62,10 +74,10 @@ const NavBar = () => {
             <IconButton
               onClick={handleOpenDrawer}
               style={{ 
-                width: openDrawer ? 7 : 33, 
+                width: (openDrawer || openLoginDrawer) ? 7 : 33, 
                 height: 33, 
-                marginLeft: openDrawer ? 37 : 33, 
-                marginRight: openDrawer ? 57 : 53, 
+                marginLeft: (openDrawer || openLoginDrawer) ? 37 : 33, 
+                marginRight: (openDrawer || openLoginDrawer) ? 57 : 53, 
                 borderRadius: 0 
               }}
               disableRipple
@@ -99,15 +111,16 @@ const NavBar = () => {
               style={{ 
                 background: 'rgba(217, 101, 34, 0.2)', 
                 height: 60, 
-                width: openDrawer && isMobile ? 126 : 118, 
+                width: (openDrawer || openLoginDrawer) && isMobile ? 126 : 118, 
                 borderRadius: 0 
               }}
+              onClick={handleOpenLoginDrawer}
               disableRipple
             >
               <img
                 src="/icons/profile.svg"
                 alt=""
-                style={{ marginRight: openDrawer && isMobile ? 8 : 0 }}
+                style={{ marginRight: (openDrawer || openLoginDrawer) && isMobile ? 8 : 0 }}
               />
             </IconButton>
           </Grid>

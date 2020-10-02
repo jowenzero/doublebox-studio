@@ -211,7 +211,7 @@ const DrawerComponent = (props) => {
                     marginRight: isMobile ? 12 : 20,
                     marginLeft: isMobile ? 12 : 20,
                   }} key={index}>
-                    <ButtonBase>
+                    <ButtonBase disableRipple>
                       <div style={{ width: isMobile ? 115 : 215, height: isMobile ? 115 : 215 }}>
                         { item.image ? 
                           <>

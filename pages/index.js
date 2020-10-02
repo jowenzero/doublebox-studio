@@ -135,7 +135,7 @@ const Home = () => {
                 <SliderWrapper>
                   <Slider {...settings}>
                     {homeImg.map((item, index) => (
-                      <img src={item.image} alt="" style={{ width: '100%', height: 'auto' }} />
+                      <img src={item.image} alt="" key={index} style={{ width: '100%', height: 'auto' }} />
                     ))}
                   </Slider>
                 </SliderWrapper>
@@ -165,7 +165,7 @@ const Home = () => {
                 N<span style={{color: "#C689B2"}}>E</span>WS
               </Typography>
 
-              <ButtonBase style={{ width: '100%', height: '100%', marginBottom: isMobile ? 10 : 25 }}>
+              <ButtonBase disableRipple style={{ width: '100%', height: '100%', marginBottom: isMobile ? 10 : 25 }}>
                 <img
                   src="/images/news-1.png"
                   alt=""
@@ -177,7 +177,7 @@ const Home = () => {
               </ButtonBase>
 
               <Grid item xs={4} style={{ textAlign: 'left' }}>
-                <ButtonBase style={{ width: isMobile ? '92%' : '95%', height: 'auto' }}>
+                <ButtonBase disableRipple style={{ width: isMobile ? '92%' : '95%', height: 'auto' }}>
                   <img
                     src="/images/news-2.png"
                     alt=""
@@ -190,7 +190,7 @@ const Home = () => {
               </Grid>
 
               <Grid item xs={4} style={{ textAlign: 'center' }}>
-                <ButtonBase style={{ width: isMobile ? '92%' : '95%', height: 'auto' }}>
+                <ButtonBase disableRipple style={{ width: isMobile ? '92%' : '95%', height: 'auto' }}>
                   <img
                     src="/images/news-3.png"
                     alt=""
@@ -203,7 +203,7 @@ const Home = () => {
               </Grid>
 
               <Grid item xs={4} style={{ textAlign: 'right' }}>
-                <ButtonBase style={{ width: isMobile ? '92%' : '95%', height: 'auto' }}>
+                <ButtonBase disableRipple style={{ width: isMobile ? '92%' : '95%', height: 'auto' }}>
                   <img
                     src="/images/news-4.png"
                     alt=""
@@ -215,7 +215,7 @@ const Home = () => {
                 </ButtonBase>
               </Grid>
 
-              <ButtonBase style={{ 
+              <ButtonBase disableRipple style={{ 
                 width: isMobile ? 180 : 300, 
                 height: isMobile ? 40 : 57, 
                 background: 'rgba(217, 101, 34, 0.2)', 
@@ -266,13 +266,13 @@ const Home = () => {
                     outline: 'none'
                   }}
                   wheel={false}
-                  alignCenter={false}
+                  alignCenter={true}
                   data={studioData.map((item, index) => (
                     <div style={{
                       marginRight: isMobile ? 20 : 30,
                       marginLeft: isMobile ? 20 : 30,
                     }} key={index}>
-                      <ButtonBase>
+                      <ButtonBase disableRipple>
                         <div style={{ width: isMobile ? 300 : 400, height: isMobile ? 600 : 694 }}>
                           <img
                             src={item.image}
@@ -321,7 +321,7 @@ const Home = () => {
                 />
               </div>
 
-              <ButtonBase style={{ 
+              <ButtonBase disableRipple style={{ 
                 width: isMobile ? 180 : 300, 
                 height: isMobile ? 40 : 57, 
                 background: 'rgba(193, 55, 148, 0.2)', 
@@ -368,13 +368,13 @@ const Home = () => {
                     outline: 'none'
                   }}
                   wheel={false}
-                  alignCenter={false}
+                  alignCenter={true}
                   data={featuredData.map((item, index) => (
                     <div style={{
                       marginRight: isMobile ? 20 : 30,
                       marginLeft: isMobile ? 20 : 30,
                     }} key={index}>
-                      <ButtonBase>
+                      <ButtonBase disableRipple>
                         <div style={{ width: isMobile ? 300 : 400, height: isMobile ? 585 : 785 }}>
                           <div className={clsx(
                             isMobile ? "img-shadow-mini" : "img-shadow"
@@ -415,7 +415,7 @@ const Home = () => {
                 />
               </div>
 
-              <ButtonBase style={{ 
+              <ButtonBase disableRipple style={{ 
                 width: isMobile ? 180 : 300, 
                 height: isMobile ? 40 : 57, 
                 background: 'rgba(217, 101, 34, 0.2)', 
