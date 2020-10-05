@@ -14,6 +14,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Pattern from "../public/images/pattern.svg";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import css from "../sass/shadow.scss";
 
 const useStyles = makeStyles(theme => ({
   mainWrap: {
@@ -49,7 +50,7 @@ const NavBar = () => {
   
   return (
     <div className={clsx(
-      "shadow",
+      css.shadow,
       classes.mainWrap,
     )}>
       <Drawer
@@ -136,9 +137,6 @@ const NavBar = () => {
           position: fixed;
           display: flex;
           z-index: 1400;
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-        }
-        .shadow {
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         }
         .hamburger-anim-forward {

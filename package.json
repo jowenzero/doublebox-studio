@@ -23,6 +23,7 @@
     "apollo-link-http": "^1.5.17",
     "apollo-upload-client": "^13.0.0",
     "cross-env": "^7.0.2",
+    "css-loader": "^4.3.0",
     "graphql": "^15.1.0",
     "graphql-tag": "^2.10.3",
     "isomorphic-unfetch": "^3.0.0",
@@ -36,6 +37,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-horizontal-scrolling-menu": "^0.7.8",
+    "react-markdown": "^4.3.1",
     "react-slick": "^0.27.11"
   }
 }

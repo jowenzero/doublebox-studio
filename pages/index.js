@@ -8,6 +8,7 @@ import { makeStyles, withStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { NextSeo } from "next-seo"
 import clsx from "clsx";
+import css from "../sass/shadow.scss";
 
 import Slider from "react-slick";
 import SliderWrapper from "../components/SlickSliderStyle"
@@ -58,33 +59,25 @@ const studioData = [
     image: "/images/studio-1.png",
     title: "THE ULTIMATE GOAL",
     subtitle: "OUR GOALS FOR THE PASSIONATE",
-    text: `Lorem ipsum dolor sit amet, nec case nusquam minimum no, ius id dolor verterem ullamcorper. Elitr regione no eos. Ullum populo vel no, viderer placerat accommodare ad pro. Mel quem illud instructior no, ex denique sapientem vix.
-
-    Est veri choro id. Per stet homero et, sed falli phaedrum elaboraret et, ius elit inani pericula ea. An legere noster his, pri eripuit expetenda dissentiunt an, vim justo prompta argumentum id. Et sed nisl elit constituto, pro mutat primis equidem et, per ne laoreet facilisi phaedrum.`,
+    text: "Lorem ipsum dolor sit amet, nec case nusquam minimum no, ius id dolor verterem ullamcorper. Elitr regione no eos. Ullum populo vel no, viderer placerat accommodare ad pro. Mel quem illud instructior no, ex denique sapientem vix.\n\nEst veri choro id. Per stet homero et, sed falli phaedrum elaboraret et, ius elit inani pericula ea. An legere noster his, pri eripuit expetenda dissentiunt an, vim justo prompta argumentum id. Et sed nisl elit constituto, pro mutat primis equidem et, per ne laoreet facilisi phaedrum.",
   },
   {
     image: "/images/studio-2.png",
     title: "THE WORKPLACE",
     subtitle: "WORKPLACE FOR THE COMFORT",
-    text: `Mollis aliquando necessitatibus te vel. Cum purto mundi copiosae in, ut saperet dolorem volutpat pro. Id sit aperiam vivendo, ea mea facer petentium. No facilis corpora honestatis eam, et ridens dolorum qui. Mel causae reprimique an, convenire explicari deterruisset.
-
-    Malis nominavi eloquentiam ea est, ius ei ancillae phaedrum vituperatoribus. Ut graece aliquando eos, ex fastidii verterem duo, sed cu sonet officiis periculis.`,
+    text: "Mollis aliquando necessitatibus te vel. Cum purto mundi copiosae in, ut saperet dolorem volutpat pro. Id sit aperiam vivendo, ea mea facer petentium. No facilis corpora honestatis eam, et ridens dolorum qui. Mel causae reprimique an, convenire explicari deterruisset.\n\nMalis nominavi eloquentiam ea est, ius ei ancillae phaedrum vituperatoribus. Ut graece aliquando eos, ex fastidii verterem duo, sed cu sonet officiis periculis.",
   },
   {
     image: "/images/studio-3.png",
     title: "THE FACILITIES",
     subtitle: "EVERYTHING THAT WE PROVIDE IS FOR USE",
-    text: `Te pri iudico facilisi, has eu utamur equidem alienum. Quem iudicabit imperdiet duo an, esse necessitatibus at sed, zril eruditi ornatus id usu. Sententiae theophrastus vix an, ei utamur partiendo scribentur qui. Ad nam vitae eloquentiam. Eu purto graeci vis, qui possim everti splendide ei, ut pri velit ponderum scribentur.
-
-    Lorem ipsum dolor sit amet, nec case nusquam minimum no, ius id dolor verterem ullamcorper. Mel quem illud instructior no, ex denique sapientem vix.`,
+    text: "Te pri iudico facilisi, has eu utamur equidem alienum. Quem iudicabit imperdiet duo an, esse necessitatibus at sed, zril eruditi ornatus id usu. Sententiae theophrastus vix an, ei utamur partiendo scribentur qui. Ad nam vitae eloquentiam. Eu purto graeci vis, qui possim everti splendide ei, ut pri velit ponderum scribentur.\n\nLorem ipsum dolor sit amet, nec case nusquam minimum no, ius id dolor verterem ullamcorper. Mel quem illud instructior no, ex denique sapientem vix.",
   },
   {
     image: "/images/studio-4.png",
     title: "THE COMMUNITY",
     subtitle: "ENCOURAGING COMPETITIVE MATES",
-    text: `Est veri choro id. Per stet homero et, sed falli phaedrum elaboraret et, ius elit inani pericula ea. An legere noster his, pri eripuit expetenda dissentiunt an, vim justo prompta argumentum id. Et sed nisl elit constituto, pro mutat primis equidem et, per ne laoreet facilisi phaedrum. Solet delectus dignissim sea ut, at mei nonumes deterruisset, eos habeo dicit populo at. Ut ius case fugit constituam, eum an graeco repudiare.
-
-    Mollis aliquando necessitatibus te vel. Cum purto mundi copiosae in, ut saperet dolorem volutpat pro.`,
+    text: "Est veri choro id. Per stet homero et, sed falli phaedrum elaboraret et, ius elit inani pericula ea. An legere noster his, pri eripuit expetenda dissentiunt an, vim justo prompta argumentum id. Et sed nisl elit constituto, pro mutat primis equidem et, per ne laoreet facilisi phaedrum. Solet delectus dignissim sea ut, at mei nonumes deterruisset, eos habeo dicit populo at. Ut ius case fugit constituam, eum an graeco repudiare.\n\nMollis aliquando necessitatibus te vel. Cum purto mundi copiosae in, ut saperet dolorem volutpat pro.",
   },
 ];
 
@@ -92,22 +85,22 @@ const featuredData = [
   {
     image: "/images/featured-1.png",
     title: "Podcast",
-    text: `Malis nominavi eloquentiam ea est, ius ei ancillae phaedrum vituperatoribus. Ut graece aliquando eos, ex fastidii verterem duo, sed cu sonet officiis periculis. No graecis denique constituam sit, eros disputando per no. Ius eu docendi pertinax. Ei pri inermis conclusionemque. Qui no tamquam fierent maluisset, vidisse moderatius quo ut. Ullum fabellas in ius.`,
+    text: "Malis nominavi eloquentiam ea est, ius ei ancillae phaedrum vituperatoribus. Ut graece aliquando eos, ex fastidii verterem duo, sed cu sonet officiis periculis. No graecis denique constituam sit, eros disputando per no. Ius eu docendi pertinax. Ei pri inermis conclusionemque. Qui no tamquam fierent maluisset, vidisse moderatius quo ut. Ullum fabellas in ius.",
   },
   {
     image: "/images/featured-2.png",
     title: "Trailer",
-    text: `Est veri choro id. Per stet homero et, sed falli phaedrum elaboraret et, ius elit inani pericula ea. An legere noster his, pri eripuit expetenda dissentiunt an, vim justo prompta argumentum id. Et sed nisl elit constituto, pro mutat primis equidem et, per ne laoreet facilisi phaedrum. Solet delectus dignissim sea ut, at mei nonumes deterruisset, eos habeo dicit populo at. `,
+    text: "Est veri choro id. Per stet homero et, sed falli phaedrum elaboraret et, ius elit inani pericula ea. An legere noster his, pri eripuit expetenda dissentiunt an, vim justo prompta argumentum id. Et sed nisl elit constituto, pro mutat primis equidem et, per ne laoreet facilisi phaedrum. Solet delectus dignissim sea ut, at mei nonumes deterruisset, eos habeo dicit populo at.",
   },
   {
     image: "/images/featured-3.png",
     title: "Released",
-    text: `Lorem ipsum dolor sit amet, nec case nusquam minimum no, ius id dolor verterem ullamcorper. Elitr regione no eos. Ullum populo vel no, viderer placerat accommodare ad pro. Mel quem illud instructior no, ex denique sapientem vix.`,
+    text: "Lorem ipsum dolor sit amet, nec case nusquam minimum no, ius id dolor verterem ullamcorper. Elitr regione no eos. Ullum populo vel no, viderer placerat accommodare ad pro. Mel quem illud instructior no, ex denique sapientem vix.",
   },
   {
     image: "/images/featured-4.png",
     title: "Game",
-    text: `Mollis aliquando necessitatibus te vel. Cum purto mundi copiosae in, ut saperet dolorem volutpat pro. Id sit aperiam vivendo, ea mea facer petentium. No facilis corpora honestatis eam, et ridens dolorum qui. Mel causae reprimique an, convenire explicari deterruisset ne vis. Cum an solet mollis deleniti, eius dignissim.`,
+    text: "Mollis aliquando necessitatibus te vel. Cum purto mundi copiosae in, ut saperet dolorem volutpat pro. Id sit aperiam vivendo, ea mea facer petentium. No facilis corpora honestatis eam, et ridens dolorum qui. Mel causae reprimique an, convenire explicari deterruisset ne vis. Cum an solet mollis deleniti, eius dignissim.",
   },
 ];
 
@@ -115,11 +108,12 @@ const Home = () => {
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const ReactMarkdown = require('react-markdown')
 
   return (
     <>
       <Layout>
-        <NextSeo title="Home" />
+        <NextSeo title="Home | Doublebox Studio" />
 
         <Grid container style={{marginBottom: 40}}>
           <Grid item xs={12}>
@@ -128,14 +122,14 @@ const Home = () => {
                 <MiniSliderWrapper>
                   <Slider {...settings}>
                     {homeImg.map((item, index) => (
-                      <img src={item.image} alt="" style={{ width: '100%', height: 'auto' }} />
+                      <img src={item.image} className={css.shadow} alt="" style={{ width: '100%', height: 'auto' }} />
                     ))}
                   </Slider>
                 </MiniSliderWrapper> :
                 <SliderWrapper>
                   <Slider {...settings}>
                     {homeImg.map((item, index) => (
-                      <img src={item.image} alt="" key={index} style={{ width: '100%', height: 'auto' }} />
+                      <img src={item.image} className={css.shadow} alt="" key={index} style={{ width: '100%', height: 'auto' }} />
                     ))}
                   </Slider>
                 </SliderWrapper>
@@ -165,7 +159,7 @@ const Home = () => {
                 N<span style={{color: "#C689B2"}}>E</span>WS
               </Typography>
 
-              <ButtonBase disableRipple style={{ width: '100%', height: '100%', marginBottom: isMobile ? 10 : 25 }}>
+              <ButtonBase disableRipple className={css.shadow} style={{ width: '100%', height: '100%', marginBottom: isMobile ? 10 : 25 }}>
                 <img
                   src="/images/news-1.png"
                   alt=""
@@ -177,7 +171,7 @@ const Home = () => {
               </ButtonBase>
 
               <Grid item xs={4} style={{ textAlign: 'left' }}>
-                <ButtonBase disableRipple style={{ width: isMobile ? '92%' : '95%', height: 'auto' }}>
+                <ButtonBase disableRipple className={css.shadow} style={{ width: isMobile ? '92%' : '95%', height: 'auto' }}>
                   <img
                     src="/images/news-2.png"
                     alt=""
@@ -190,7 +184,7 @@ const Home = () => {
               </Grid>
 
               <Grid item xs={4} style={{ textAlign: 'center' }}>
-                <ButtonBase disableRipple style={{ width: isMobile ? '92%' : '95%', height: 'auto' }}>
+                <ButtonBase disableRipple className={css.shadow} style={{ width: isMobile ? '92%' : '95%', height: 'auto' }}>
                   <img
                     src="/images/news-3.png"
                     alt=""
@@ -203,7 +197,7 @@ const Home = () => {
               </Grid>
 
               <Grid item xs={4} style={{ textAlign: 'right' }}>
-                <ButtonBase disableRipple style={{ width: isMobile ? '92%' : '95%', height: 'auto' }}>
+                <ButtonBase disableRipple className={css.shadow} style={{ width: isMobile ? '92%' : '95%', height: 'auto' }}>
                   <img
                     src="/images/news-4.png"
                     alt=""
@@ -271,9 +265,9 @@ const Home = () => {
                     <div style={{
                       marginRight: isMobile ? 20 : 30,
                       marginLeft: isMobile ? 20 : 30,
-                    }} key={index}>
+                    }} className={css.shadow} key={index}>
                       <ButtonBase disableRipple>
-                        <div style={{ width: isMobile ? 300 : 400, height: isMobile ? 600 : 694 }}>
+                        <div style={{ width: isMobile ? 300 : 400, height: isMobile ? 610 : 725 }}>
                           <img
                             src={item.image}
                             alt=""
@@ -312,7 +306,7 @@ const Home = () => {
                               textAlign: 'left',
                             }}
                           >
-                            {item.text}
+                            <ReactMarkdown source={item.text} />
                           </Typography>
                         </div>
                       </ButtonBase>
@@ -373,7 +367,7 @@ const Home = () => {
                     <div style={{
                       marginRight: isMobile ? 20 : 30,
                       marginLeft: isMobile ? 20 : 30,
-                    }} key={index}>
+                    }} className={css.shadow} key={index}>
                       <ButtonBase disableRipple>
                         <div style={{ width: isMobile ? 300 : 400, height: isMobile ? 585 : 785 }}>
                           <div className={clsx(

@@ -296,6 +296,7 @@ const MiniSliderWrapper = styled("div")`
     border-radius: 0px;
     position: relative;
     background: #221F1F;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
   .slick-dots li {
@@ -314,6 +315,7 @@ const MiniSliderWrapper = styled("div")`
     top: -2px;
     overflow: hidden;
     background: #D96522;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
     .loading {
       height: 14px;

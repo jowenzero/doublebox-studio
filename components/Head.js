@@ -70,7 +70,7 @@ const HeadComponent = () => (
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:image:src" content={brand.img}/>
         <meta property="og:url" content={brand.url} />
-        <meta property="og:title" content={brand.title} />
+        <meta property="og:title" content={brand.name} />
         <meta
             property="og:description"
             content={brand.desc}
