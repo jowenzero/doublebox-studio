@@ -9,7 +9,7 @@ const brand = {
     logoText: 'DoubleBox Studio',
     projectName: 'DoubleBox Studio',
     url: 'doublebox.netlify.app',
-    img: '/icons/doublebox-studio.svg',
+    img: '/icons/doublebox-intro.png',
 }
 
 const HeadComponent = () => (
@@ -59,16 +59,16 @@ const HeadComponent = () => (
         {/* PWA primary color */}
         <meta name="theme-color" content="#ffffff" />
         {/*  Facebook */}
-        <meta property="author" content="DoubleBox Studio" />
+        <meta property="author" content={brand.name} />
         <meta property="og:site_name" content={brand.url} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         {/*  Twitter */}
         <meta property="twitter:site" content={brand.url} />
         <meta property="twitter:domain" content={brand.url} />
-        <meta property="twitter:creator" content="doublebox" />
+        <meta property="twitter:creator" content={brand.prefix} />
         <meta property="twitter:card" content="summary" />
-        <meta property="twitter:image:src" content="/icons/doublebox-studio.svg" />
+        <meta property="twitter:image:src" content={brand.img}/>
         <meta property="og:url" content={brand.url} />
         <meta property="og:title" content={brand.title} />
         <meta

@@ -13,7 +13,7 @@ import Slider from "react-slick";
 import SliderWrapper from "../components/SlickSliderStyle"
 import MiniSliderWrapper from "../components/MiniSlickSliderStyle"
 
-import StudioBG from "../public/images/studio-bg.svg"
+import StudioBG from "../public/images/studio-bg.png"
 import ScrollMenu from 'react-horizontal-scrolling-menu';
 
 const useStyles = makeStyles(theme => ({

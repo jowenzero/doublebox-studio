@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles, withStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import Background from '../public/images/drawer-bg.svg';
+import Background from '../public/images/drawer-bg.png';
 import MiniFooter from "./MiniFooter";
 import clsx from "clsx";
 
